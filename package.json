@@ -1,0 +1,13 @@
+{
+  "name": "mui_key_error_test",
+  "version": "0.0.0",
+  "description": "Prototype for sharing mui key error situations",
+  "author": "qsoo",
+  "license": "UNLICENSED",
+  "scripts": {
+    "build": "pnpm --stream -r --filter ./packages/** run build",
+    "lint": "pnpm --stream -r --filter ./packages/** run lint",
+    "lint-fix": "pnpm --stream -r --filter ./packages/** run lint-fix",
+    "preview": "pnpm --parallel --stream -r --filter ./packages/** run preview"
+  }
+}
