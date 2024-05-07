@@ -9,10 +9,16 @@ export default defineConfig({
     federation({
       name: 'examples/host-app',
       remotes: {
-        remoteApp1: 'http://localhost:7100/assets/remoteEntry.js',
-        remoteApp2: 'http://localhost:7200/assets/remoteEntry.js',
+        notShared: 'http://localhost:5001/assets/remoteEntry.js',
+        shared: 'http://localhost:5002/assets/remoteEntry.js',
       },
-      shared: ['react', 'react-dom', 'typescript'],
+      shared: [
+        'react',
+        'react-dom',
+        'typescript',
+        '@mui/icons-material',
+        '@mui/material',
+      ],
     }),
   ],
   build: {

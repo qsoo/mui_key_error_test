@@ -5,9 +5,12 @@
   "author": "qsoo",
   "license": "UNLICENSED",
   "scripts": {
-    "build": "pnpm --stream -r --filter ./packages/** run build",
-    "lint": "pnpm --stream -r --filter ./packages/** run lint",
-    "lint-fix": "pnpm --stream -r --filter ./packages/** run lint-fix",
-    "preview": "pnpm --parallel --stream -r --filter ./packages/** run preview"
+    "build": "pnpm --parallel --filter \"./**\" build",
+    "lint": "pnpm --parallel -r --filter \"./**\" run lint",
+    "lint-fix": "pnpm --parallel -r --filter \"./**\" run lint-fix",
+    "preview": "pnpm --parallel --stream -r --filter ./** run preview",
+    "build:remotes": "pnpm --parallel --filter \"./remotes/**\" build",
+    "preview:remotes": "pnpm --parallel --filter \"./remotes/**\" preview",
+    "dev:hosts": "pnpm --filter \"./host\" dev"
   }
 }

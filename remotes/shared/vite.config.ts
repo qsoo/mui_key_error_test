@@ -7,12 +7,18 @@ export default defineConfig({
   plugins: [
     react(),
     federation({
-      name: 'remote_2',
+      name: 'remote',
       filename: 'remoteEntry.js',
       exposes: {
         './App': './src/App',
       },
-      shared: ['react', 'react-dom', 'typescript'],
+      shared: [
+        'react',
+        'react-dom',
+        'typescript',
+        '@mui/icons-material',
+        '@mui/material',
+      ],
     }),
   ],
   build: {
